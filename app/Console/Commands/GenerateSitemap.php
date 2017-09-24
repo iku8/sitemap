@@ -20,7 +20,7 @@ class GenerateSitemap extends Command
     public function handle()
     {
         // プロジェクトのURL以下を解析し、sitemap.xmlという名前でサイトマップを作成する
-        SitemapGenerator::create("http://iku8.hatenablog.com/")
+        SitemapGenerator::create(config('app.url'))
         //SitemapGenerator::create(config('app.url'))
             ->writeToFile(public_path('sitemap.xml'));
     }
