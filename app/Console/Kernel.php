@@ -19,7 +19,7 @@ class Kernel extends ConsoleKernel
     // スケジュール登録
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('create_sitemap')->everyMinute();
+        $schedule->command('create_sitemap')->daily();
     }
 
     /**
